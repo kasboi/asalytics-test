@@ -15,9 +15,11 @@ const DataList: NextPage = () => {
   if (isError){
     return <h2>{error.message}</h2>
   }
-  
+  const dataProp = {
+    data: data
+  }
   return(
-    <DataItem data={data} />
+    <DataItem {...dataProp} />
   )
 }
 
