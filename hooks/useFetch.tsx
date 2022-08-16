@@ -2,7 +2,7 @@ import request from "graphql-request"
 import { useQuery } from "@tanstack/react-query"
 import { Group } from "next/dist/shared/lib/router/utils/route-regex"
 
-//query statement
+//query statement for the fetch
 const query = `{
   asalist {
     result {
@@ -18,7 +18,7 @@ const url = 'https://analytics-api.herokuapp.com/analytics'
 // function for fetching asalist data
 const fetchData = async () => {
   const data = await request(url, query)
-  const dataList = data.asalist.results
+  const dataList = data.asalist.result
   return dataList
 }
 
