@@ -5,7 +5,7 @@ import { Group } from "next/dist/shared/lib/router/utils/route-regex"
 //query statement
 const query = `{
   asalist {
-    results {
+    result {
       assetId
       available
       logo
